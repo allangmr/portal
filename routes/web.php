@@ -13,5 +13,10 @@
 
 
 
-Route::get('/', 'NotasController@index');
+Route::view('/', 'welcome');
+Route::get('/inicio', 'NotasController@index');
 Route::get('/chat', 'NotasController@chat');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
