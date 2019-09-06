@@ -13,9 +13,14 @@
 
 
 
-Route::view('/', 'welcome');
-Route::get('/inicio', 'NotasController@index');
-Route::get('/chat', 'NotasController@chat');
+Route::view('/', '/auth/login');
+Route::view('solicitar', 'solicitar')->name('solicitar');
+
+Route::view('reset', 'auth\passwords\reset')->name('reset');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('inicio', 'NotasController@index')->name('inicio');
+    Route::get('chat', 'NotasController@chat')->name('inicio');
+});
 
 Auth::routes();
 

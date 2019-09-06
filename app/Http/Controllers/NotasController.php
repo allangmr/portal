@@ -16,4 +16,8 @@ class NotasController extends Controller
         $name = "Allan";
         return view('chat', compact('name'));
     }
+    public function solicitar()
+    {
+        return view('solicitar');
+    }
 }
