@@ -1,4 +1,4 @@
-@extends('layoutsec')
+@extends('layouts\layoutsec')
 
 @section('title', 'Login')
 

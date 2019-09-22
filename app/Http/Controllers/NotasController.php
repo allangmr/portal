@@ -9,15 +9,15 @@ class NotasController extends Controller
     public function index()
     {
         $name = "Allan";
-        return view('index', compact('name'));
+        return view('contenido.index', compact('name'));
     }
     public function chat()
     {
         $name = "Allan";
-        return view('chat', compact('name'));
+        return view('contenido.chat', compact('name'));
     }
     public function solicitar()
     {
-        return view('solicitar');
+        return view('contenido.solicitar');
     }
 }
