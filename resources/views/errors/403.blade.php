@@ -1,7 +1,7 @@
 
 
 @auth
-    <h2>Eres un estandar</h2>
+    <h2>Hola</h2>
 @endauth
 
 @guest

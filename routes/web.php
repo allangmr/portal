@@ -13,13 +13,15 @@
 
 
 
-Route::view('/', '/auth/login');
+Route::view('login', 'auth.login')->name('login')->middleware('guest');;
 Route::view('solicitar', 'auth.solicitar')->name('solicitar');
-
-Route::view('reset', 'auth\passwords\reset')->name('reset');
+Route::view('reset', 'auth.passwords.reset')->name('reset');
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('inicio', 'NotasController@index')->name('inicio');
-    Route::get('chat', 'NotasController@chat')->name('inicio');
+    Route::get('/', 'NotasController@index');
+    Route::get('/inicio', 'NotasController@index')->name('inicio');
+    Route::get('chat', 'NotasController@chat')->name('chat');
 });
+
+
 
 Auth::routes();

@@ -28,7 +28,7 @@
 </head>
 
 <body id="page-top">
-
+  <div id="app">
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -47,7 +47,7 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div id="app" class="container-fluid">
+        <div class="container-fluid">
             @yield("contenido")
         </div>
         <!-- /.container-fluid -->
@@ -94,6 +94,8 @@
       </div>
     </div>
   </div>
+  
+</div>
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" ></script>
   <!-- Core plugin JavaScript-->
@@ -104,10 +106,10 @@
 
   <!-- Page level plugins -->
   <script src="js/Chart.min.js"></script>
-
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+
 
 </body>
 

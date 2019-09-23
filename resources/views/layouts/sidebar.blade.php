@@ -13,8 +13,8 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li  @click="menu=0" class="nav-item active">
-        <a class="nav-link" href="#">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{route('inicio')}}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Inicio</span></a>
       </li>
@@ -36,7 +36,7 @@
         <div id="collapseUtilitiesx" class="collapse" aria-labelledby="headingUtilitiesx" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Acción</h6>
-            <a @click="menu=1" class="collapse-item" href="#">Consulta de Pacientes</a>
+            <a  class="collapse-item" href="#">Consulta de Pacientes</a>
             <a @click="menu=2" class="collapse-item" href="#">Historial</a>
             <a @click="menu=3" class="collapse-item" href="#">Reportes</a>
           </div>
@@ -174,7 +174,7 @@
       </li>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <li  v-on:click="menu=1" class="nav-item">
         <a class="nav-link" href="#">
           <i class="fas fa-fw fa-chart-line"></i>
           <span>Ingresos Proyectados</span></a>
