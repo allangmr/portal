@@ -6,15 +6,18 @@ use Illuminate\Http\Request;
 
 class NotasController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('preventBackHistory');
+        $this->middleware('auth');
+    }
     public function index()
     {
-        $name = "Allan";
-        return view('contenido.index', compact('name'));
+        return view('contenido.index');
     }
     public function chat()
     {
-        $name = "Allan";
-        return view('contenido.chat', compact('name'));
+        return view('contenido.chat');
     }
     public function solicitar()
     {
