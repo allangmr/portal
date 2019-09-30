@@ -2226,6 +2226,44 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Pacientes.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Pacientes.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      nombre: '',
+      descripcion: ''
+    };
+  },
+  methods: {
+    listarPacientes: function listarPacientes() {
+      axios.get('/pacientes').then(function (response) {
+        // handle success
+        console.log(response);
+      })["catch"](function (error) {
+        // handle error
+        console.log(error);
+      });
+    }
+  },
+  mounted: function mounted() {
+    console.log('Component Mounted.');
+    this.listarPacientes();
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -38202,260 +38240,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div")
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "main-card mb-3 card" }, [
-      _c("div", { staticClass: "card-body" }, [
-        _c("h5", { staticClass: "card-title" }, [
-          _vm._v("Bootstrap 4 Form Validation")
-        ]),
-        _vm._v(" "),
-        _c(
-          "form",
-          {
-            staticClass: "col-md-10 mx-auto",
-            attrs: {
-              id: "signupForm",
-              method: "post",
-              action: "",
-              novalidate: "novalidate",
-              _lpchecked: "1"
-            }
-          },
-          [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "firstname" } }, [
-                _vm._v("First name")
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("input", {
-                  staticClass: "form-control is-invalid",
-                  staticStyle: {
-                    "background-image":
-                      'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==")',
-                    "background-repeat": "no-repeat",
-                    "background-attachment": "scroll",
-                    "background-size": "16px 18px",
-                    "background-position": "98% 50%",
-                    cursor: "auto"
-                  },
-                  attrs: {
-                    type: "text",
-                    id: "firstname",
-                    name: "firstname",
-                    placeholder: "First name",
-                    "aria-describedby": "firstname-error",
-                    "aria-invalid": "true"
-                  }
-                }),
-                _c(
-                  "em",
-                  {
-                    staticClass: " invalid-feedback",
-                    attrs: { id: "firstname-error" }
-                  },
-                  [_vm._v("Please enter your firstname")]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "lastname" } }, [
-                _vm._v("Last name")
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("input", {
-                  staticClass: "form-control is-invalid",
-                  attrs: {
-                    type: "text",
-                    id: "lastname",
-                    name: "lastname",
-                    placeholder: "Last name",
-                    "aria-describedby": "lastname-error",
-                    "aria-invalid": "true"
-                  }
-                }),
-                _c(
-                  "em",
-                  {
-                    staticClass: " invalid-feedback",
-                    attrs: { id: "lastname-error" }
-                  },
-                  [_vm._v("Please enter your lastname")]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "username" } }, [_vm._v("Username")]),
-              _vm._v(" "),
-              _c("div", [
-                _c("input", {
-                  staticClass: "form-control is-invalid",
-                  attrs: {
-                    type: "text",
-                    id: "username",
-                    name: "username",
-                    placeholder: "Username",
-                    "aria-describedby": "username-error",
-                    "aria-invalid": "true"
-                  }
-                }),
-                _c(
-                  "em",
-                  {
-                    staticClass: " invalid-feedback",
-                    attrs: { id: "username-error" }
-                  },
-                  [_vm._v("Please enter a username")]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
-              _vm._v(" "),
-              _c("div", [
-                _c("input", {
-                  staticClass: "form-control is-invalid",
-                  attrs: {
-                    type: "text",
-                    id: "email",
-                    name: "email",
-                    placeholder: "Email",
-                    "aria-describedby": "email-error",
-                    "aria-invalid": "true"
-                  }
-                }),
-                _c(
-                  "em",
-                  {
-                    staticClass: " invalid-feedback",
-                    attrs: { id: "email-error" }
-                  },
-                  [_vm._v("Please enter a valid email address")]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control is-invalid",
-                staticStyle: {
-                  "background-image":
-                    'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=")',
-                  "background-repeat": "no-repeat",
-                  "background-attachment": "scroll",
-                  "background-size": "16px 18px",
-                  "background-position": "98% 50%",
-                  cursor: "auto"
-                },
-                attrs: {
-                  type: "password",
-                  id: "password",
-                  name: "password",
-                  placeholder: "Password",
-                  "aria-describedby": "password-error"
-                }
-              }),
-              _c(
-                "em",
-                {
-                  staticClass: " invalid-feedback",
-                  attrs: { id: "password-error" }
-                },
-                [_vm._v("Please provide a password")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "confirm_password" } }, [
-                _vm._v("Confirm password")
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("input", {
-                  staticClass: "form-control is-invalid",
-                  staticStyle: {
-                    "background-image":
-                      'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=")',
-                    "background-repeat": "no-repeat",
-                    "background-attachment": "scroll",
-                    "background-size": "16px 18px",
-                    "background-position": "98% 50%",
-                    cursor: "auto"
-                  },
-                  attrs: {
-                    type: "password",
-                    id: "confirm_password",
-                    name: "confirm_password",
-                    placeholder: "Confirm password",
-                    "aria-describedby": "confirm_password-error"
-                  }
-                }),
-                _c(
-                  "em",
-                  {
-                    staticClass: " invalid-feedback",
-                    attrs: { id: "confirm_password-error" }
-                  },
-                  [_vm._v("Please provide a password")]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("div", [
-                _c("div", { staticClass: "form-check" }, [
-                  _c("input", {
-                    staticClass: "form-check-input is-valid",
-                    attrs: {
-                      type: "checkbox",
-                      id: "agree",
-                      name: "agree",
-                      value: "agree",
-                      "aria-describedby": "agree-error",
-                      "aria-invalid": "false"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("label", { staticClass: "form-check-label" }, [
-                    _vm._v("Please agree to our policy")
-                  ]),
-                  _c("em", {
-                    staticClass: " invalid-feedback",
-                    staticStyle: { display: "none" },
-                    attrs: { id: "agree-error" }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  attrs: { type: "submit", name: "signup", value: "Sign up" }
-                },
-                [_vm._v("Sign up")]
-              )
-            ])
-          ]
-        )
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -50756,15 +50543,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pacientes_vue_vue_type_template_id_04d7a447___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pacientes.vue?vue&type=template&id=04d7a447& */ "./resources/js/components/Pacientes.vue?vue&type=template&id=04d7a447&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pacientes.vue?vue&type=script&lang=js& */ "./resources/js/components/Pacientes.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Pacientes_vue_vue_type_template_id_04d7a447___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Pacientes_vue_vue_type_template_id_04d7a447___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -50778,6 +50567,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/Pacientes.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pacientes.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Pacientes.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Pacientes.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Pacientes.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

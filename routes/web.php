@@ -20,6 +20,11 @@ Route::group(['middleware' => ['guest']], function () {
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'NotasController@index');
     Route::get('/inicio', 'NotasController@index')->name('inicio');
+    Route::get('/pacientes', 'PacienteController@index')->name('listar');
+    Route::post('/pacientes/registrar', 'PacienteController@store')->name('registrar');
+    Route::put('/pacientes/actualizar', 'PacienteController@update')->name('actualizar');
+    Route::put('/pacientes/desactivar', 'PacienteController@desactivar')->name('desactivar');
+    Route::put('/pacientes/activar', 'PacienteController@activar')->name('activar');
     Route::get('chat', 'NotasController@chat')->name('chat')->middleware('auth', 'role:administrador'); //Solo puede acceder el rol administrador.
 });
 
