@@ -19,7 +19,7 @@ class CreatePacientesTable extends Migration
             $table->string('identidad', 100)->unique()->nullable();
             $table->dateTime('fec_entrada')->nullable();
             $table->dateTime('fec_salida')->nullable();
-            $table->integer('id_medico')->nullable();
+            $table->text('medico')->nullable();
             $table->text('aseguradora_uno')->nullable();
             $table->string('poliza_uno')->nullable();
             $table->text('aseguradora_dos')->nullable();
@@ -30,14 +30,14 @@ class CreatePacientesTable extends Migration
             $table->text('hospital')->nullable();
             $table->string('piso_hospital', 10)->nullable();
             $table->string('habitacion',25)->nullable();
-            $table->string('Observación',255)->nullable();
+            $table->string('observación',255)->nullable();
             $table->decimal('monto_pasado',8,2)->nullable();
             $table->decimal('monto_recibido',8,2)->nullable();
             $table->string('detalle_pago',200)->unique()->nullable();
             $table->dateTime('fec_entrega_factura_seguro')->nullable();
             $table->dateTime('fec_recibo_pago')->nullable();
-            $table->integer('estado_paciente');
-            $table->integer('estado')->default(1);
+            $table->text('estado_paciente');
+            $table->text('estado');
             $table->timestamps();
         });
     }
