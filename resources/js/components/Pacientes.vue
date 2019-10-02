@@ -11,7 +11,15 @@
             <div class="card-header pt-3">
             	<div class="d-sm-flex align-items-center justify-content-between mb-2">
               <h6 class="m-0 font-weight-bold text-primary d-inline">Registro de Pacientes</h6>
-           	    	<button type="button" @click="hola()" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-user-injured"></i> NUEVO</button>
+           	    	<button type="button" @click="showModal = true" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-user-injured"></i> NUEVO</button>
+					  <!-- use the modal component, pass in the prop -->
+					  <modal v-if="showModal" @close="showModal = false">
+					    <!--
+					      you can use custom content here to overwrite
+					      default content
+					    -->
+					    <h3 slot="header">custom header</h3>
+					  </modal>
             	</div>
             </div>
             <div class="card-body">
@@ -79,9 +87,11 @@
 </template>
 <script>
 import datatables from 'datatables'
+import {EagleModal} from 'vue-eagle-modal'
 export default{
 	data(){
 		return {
+			showModal: false,
 			id:'',
 			nombre:'',
 			identidad:'',
@@ -168,6 +178,24 @@ export default{
 	mounted(){
 		console.log('Componente montado Paciente.');
 		this.listarPacientes();
+		this.$modals.open({
+	      title: 'Custom theme',
+	      text: "your alert Text",
+	      items:[
+	          {
+	              label: 'Username',
+	              name: 'username',
+	              type: 'text',
+	              value: 'Daniel',
+	          },
+	          {
+	              label: 'Bio',
+	              name: 'bio',
+	              type: 'textarea',
+	              value: 'web developer',
+	          }
+	      ]
+	    }).open();
 	}
 }
 
