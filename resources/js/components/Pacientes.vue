@@ -1,4 +1,4 @@
-<template>
+<template >
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
@@ -11,10 +11,8 @@
             <div class="card-header pt-3">
             	<div class="d-sm-flex align-items-center justify-content-between mb-2">
               <h6 class="m-0 font-weight-bold text-primary d-inline">Registro de Pacientes</h6>
-           	    	<button type="button" @click="menu=3" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-user-injured"></i> NUEVO</button>
+           	    	<button type="button" @click="show=true" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-user-injured"></i> NUEVO</button>
 					  <!-- use the modal component, pass in the prop -->
-					  <div v-if="showModal">
-					  </div>
             	</div>
             </div>
             <div class="card-body">
@@ -62,7 +60,16 @@
           </div>
 
         </div>
+        <div class="container-fluid">
+    			<h1>Aqui</h1>
+           	    	<button type="button" @click="show=false" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-user-injured"></i> REGRESAR</button>
+        </div>
         <!-- /.container-fluid -->
+</template>
+<template v-if="show">
+
+	<h1>Aqui</h1>
+	           	    	<button type="button" @click="show=false" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-user-injured"></i> REGRESAR</button>
 </template>
 <script>
 import datatables from 'datatables'
@@ -71,6 +78,7 @@ export default{
 	data(){
 		return {
 			showModal: false,
+			show:false,
 			id:'',
 			nombre:'',
 			identidad:'',
