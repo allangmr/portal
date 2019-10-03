@@ -2348,27 +2348,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2458,21 +2437,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     console.log('Componente montado Paciente.');
     this.listarPacientes();
-    this.$modals.open({
-      title: 'Custom theme',
-      text: "your alert Text",
-      items: [{
-        label: 'Username',
-        name: 'username',
-        type: 'text',
-        value: 'Daniel'
-      }, {
-        label: 'Bio',
-        name: 'bio',
-        type: 'textarea',
-        value: 'web developer'
-      }]
-    }).open();
+    alert(menu);
   }
 });
 
@@ -6936,6 +6901,25 @@ exports = module.exports = __webpack_require__(/*! ../../../css-loader/lib/css-b
 
 // module
 exports.push([module.i, ".fade-enter-active, .fade-leave-active {\n  -webkit-transition: opacity 5s;\n  transition: opacity 5s;\n}\n\n.fade-enter, .fade-leave-to {\n  opacity: 0;\n}\n\n.emodal.rtl {\n  direction: rtl;\n  text-align: right;\n}\n.emodal.rtl .item-row .label-text {\n  padding-right: 78px;\n}\n.emodal.rtl footer.default {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.emodal.rtl footer.default ._btn {\n  margin: 0;\n}\n.emodal.rtl footer.default ._btn:not(:last-child) {\n  margin-right: 0.5rem;\n}\n\n.emodal.alert {\n  height: auto;\n}\n.emodal.alert header {\n  padding: 0.75rem;\n}\n.emodal.alert header .btns {\n  top: 0;\n  right: 0;\n  height: 100%;\n}\n.emodal.alert header .btns .btn-close {\n  height: 100%;\n  width: 50px;\n  border-radius: 0;\n  margin: 0;\n  background: none !important;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.emodal.alert header .btns .btn-close::after, .emodal.alert header .btns .btn-close::before {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 0;\n  height: 2px;\n  border-radius: 2px;\n  width: 60%;\n  left: 20%;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  background: #666;\n}\n.emodal.alert header .btns .btn-close::before {\n  -webkit-transform: rotate(-45deg);\n          transform: rotate(-45deg);\n}\n.emodal.alert .wrap {\n  height: auto;\n  margin: 0;\n}\n\n.emodal.osx {\n  border-radius: 8px;\n  background: #fff;\n  background: linear-gradient(130deg, #fff, #f2f3f6);\n  -webkit-box-shadow: 0 25px 60px rgba(64, 72, 90, 0.2), 0 0 30px rgba(0, 0, 0, 0.1);\n          box-shadow: 0 25px 60px rgba(64, 72, 90, 0.2), 0 0 30px rgba(0, 0, 0, 0.1);\n  color: #2f2c2c;\n}\n.emodal.osx header {\n  border-radius: 8px 8px 0 0;\n  background: rgba(106, 101, 177, 0.04);\n  border-bottom: 1px solid #f2f6f7;\n}\n.emodal.mojave {\n  border-radius: 8px;\n  background: #31353d;\n  background: linear-gradient(130deg, #31353d, #2f3640);\n  -webkit-box-shadow: 0 25px 60px rgba(64, 72, 90, 0.2), 0 0 30px rgba(0, 0, 0, 0.1);\n          box-shadow: 0 25px 60px rgba(64, 72, 90, 0.2), 0 0 30px rgba(0, 0, 0, 0.1);\n  color: #e5e5e5;\n}\n.emodal.mojave header {\n  color: #fff;\n  border-radius: 8px 8px 0 0;\n  background: rgba(0, 0, 0, 0.04);\n  border-bottom: 1px solid rgba(0, 0, 0, 0.07);\n}\n.emodal.mojave footer.default ._btn.cancel {\n  color: #6c7883;\n  border: none;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.emodal.mojave footer.default ._btn.cancel:hover {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.03);\n  text-shadow: 0 0 5px rgba(255, 255, 255, 0.03);\n}\n.emodal.mojave .custom-file-label, .emodal.mojave .form-control, .emodal.mojave .custom-select {\n  background-color: #17212b;\n  border-color: #101921;\n  color: #ccc;\n}\n.emodal.mojave .custom-file-label:focus, .emodal.mojave .form-control:focus, .emodal.mojave .custom-select:focus {\n  color: #fff;\n}\n.emodal.mojave .custom-file-label::after {\n  color: #87949e;\n  background: rgba(0, 0, 0, 0.18);\n  border-color: #101921;\n}\n.emodal.mojave .custom-select {\n  background: #17212b url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23aaa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E\") no-repeat right 0.75rem center;\n  background-size: 8px 10px;\n}\n\n.emodal.alert header .btns .btn-close::after, .emodal.alert header .btns .btn-close::before {\n  background: #aaa;\n}\n\n.modals {\n  position: fixed !important;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  -webkit-transform: none;\n          transform: none;\n  z-index: 999;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  -webkit-transition: opacity 0.15s !important;\n  transition: opacity 0.15s !important;\n  line-height: 1.5;\n}\n.modals * {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.modals .bg {\n  position: fixed;\n  background: rgba(14, 18, 19, 0.6);\n  z-index: 100;\n  min-height: 100%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 0;\n}\n.modals textarea.form-control {\n  min-height: 68px;\n  height: 120px;\n}\n.modals::after {\n  content: \"\";\n  pointer-events: none;\n  display: none;\n}\n.modals .has-image .fi {\n  height: 33px;\n  float: right;\n}\n.modals .has-image .fi img {\n  height: 100%;\n  width: auto;\n}\n.modals .has-image .custom-file {\n  width: auto;\n  margin-right: 40px;\n  float: none;\n  display: block;\n}\n.modals.load::after {\n  display: block;\n}\n.modals .flex {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.modals .flex1 {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.modals .vdr {\n  border: none !important;\n}\n.modals .vdr:not(.resizing) {\n  -webkit-transition: 0.5s height;\n  transition: 0.5s height;\n}\n.modals .vdr > div:not(.emodal) {\n  z-index: 999999;\n  background: none;\n  border: none;\n}\n.modals .vdr .handle-tm, .modals .vdr .handle-bm {\n  left: 0;\n  right: 0;\n  margin: 0 10px;\n  height: 15px;\n  width: auto;\n}\n.modals .vdr .handle-bm {\n  top: unset;\n}\n.modals .vdr .handle-mr, .modals .vdr .handle-ml {\n  top: 0;\n  bottom: 0;\n  margin: 10px 0;\n  height: auto;\n}\n.modals .vdr .handle-br {\n  bottom: 0;\n  right: 0;\n}\n.modals .vdr .handle-bl {\n  bottom: 0;\n  left: 0;\n}\n.modals .vdr .handle-lr {\n  bottom: 0;\n  left: 0;\n}\n.modals .vdr .handle-tl {\n  top: 0;\n  left: 0;\n}\n.modals .vdr .handle-tr {\n  top: 0px;\n  right: 0px;\n}\n.modals .select2-container {\n  width: 100% !important;\n}\n\n.emodal {\n  position: absolute;\n  width: 500px;\n  height: 400px;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate3d(-50%, -50%, 0px);\n          transform: translate3d(-50%, -50%, 0px);\n  overflow: hidden;\n  z-index: 10;\n}\n.emodal.enter {\n  -webkit-transform: translate3d(0px, 30px, 0px);\n          transform: translate3d(0px, 30px, 0px);\n  opacity: 0;\n}\n.emodal.closing {\n  -webkit-transform: translate3d(0px, -30px, 0px);\n          transform: translate3d(0px, -30px, 0px);\n  opacity: 0;\n}\n.emodal header {\n  position: relative;\n  font-size: 20px;\n  text-align: center;\n  padding: 20px;\n}\n.emodal header .btns {\n  position: absolute;\n  right: 10px;\n  top: 10px;\n}\n.emodal header .btns > div {\n  position: relative;\n  height: 14px;\n  width: 14px;\n  border-radius: 100px;\n  margin-right: 5px;\n  float: right;\n  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;\n          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;\n  background: #eee;\n  background: #28ca41;\n  opacity: 0.7;\n  cursor: pointer;\n  -webkit-transition: 0.1s;\n  transition: 0.1s;\n}\n.emodal header .btns > div:hover {\n  opacity: 1;\n}\n.emodal header .btns > div:nth-child(2) {\n  cursor: default;\n  background: #ffbd2d;\n}\n.emodal header .btns > div i {\n  -webkit-transition: 0.1s;\n  transition: 0.1s;\n  color: #fff;\n  display: inline-block;\n  font-size: 11px;\n  position: absolute;\n  top: 0;\n  right: 1px;\n  opacity: 0;\n}\n.emodal header .btns > div:hover i {\n  opacity: 1;\n}\n.emodal header .btns > div.btn-close {\n  background: #ff6155;\n  opacity: 1;\n}\n.emodal header .btns > div.btn-close i {\n  right: 2px;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n}\n.emodal header .btns > div.btn-close:hover {\n  background: #ed5249;\n}\n.emodal footer.default {\n  padding: 0.75rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n      -ms-flex-direction: row-reverse;\n          flex-direction: row-reverse;\n}\n.emodal footer.default ._btn {\n  border-radius: 4px;\n  padding: 0.375rem 0.75rem;\n  font-size: 1rem;\n  border: 1px solid transparent;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;\n  outline: none;\n}\n.emodal footer.default ._btn:not(:last-child) {\n  margin-left: 0.5rem;\n}\n.emodal footer.default ._btn.save {\n  color: #fff;\n  background-color: #007bff;\n  border-color: #007bff;\n}\n.emodal footer.default ._btn.save:hover {\n  background-color: #0069d9;\n  border-color: #0062cc;\n}\n.emodal footer.default ._btn.cancel {\n  background: none;\n}\n.emodal footer.default ._btn.cancel:hover {\n  color: #212529;\n  background-color: #e2e6ea;\n  border-color: #dae0e5;\n}\n.emodal .wrap {\n  position: relative;\n  overflow: auto;\n  padding: 1rem;\n  margin: 1rem 0.5rem;\n  margin-bottom: 0;\n  height: calc(100% - 149px);\n}\n.emodal .content {\n  position: relative;\n  z-index: 2;\n  -webkit-transition: 0.2s opacity;\n  transition: 0.2s opacity;\n}\n.emodal.load .content {\n  opacity: 0;\n}\n.emodal .inner {\n  position: relative;\n  padding: 1rem 1.5rem 0 1.5rem;\n}\n.emodal .inner .fi {\n  width: 50px;\n  float: left;\n}\n.emodal .loader {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  visibility: hidden;\n  opacity: 0;\n  -webkit-transition: 0.2s;\n  transition: 0.2s;\n}\n.emodal .loader .l {\n  height: 30px;\n  width: 30px;\n  opacity: 0.8;\n}\n.emodal.load .loader {\n  visibility: visible;\n  opacity: 1;\n}\n.emodal .item-row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding: 0.25rem 0;\n}\n.emodal .item-row .label-text {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  height: 100%;\n  padding-right: 68px;\n  word-break: break-all;\n}\n.emodal .item-row > .label {\n  width: 120px;\n}\n.emodal .item-row > .col-data {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.emodal .item-row > .col-data select {\n  width: 100%;\n}\n.emodal .custom-control.custom-checkbox {\n  margin-top: 5px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.modal-mask {\n  position: fixed;\n  z-index: 9998;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, .5);\n  display: table;\n  transition: opacity .3s ease;\n}\n.modal-wrapper {\n  display: table-cell;\n  vertical-align: middle;\n}\n.modal-container {\n  min-width:200px;\n  overflow-y: auto;\n  overflow-x: none;\n  max-width: 800px;\n  margin: 0px auto;\n  padding: 20px 30px;\n  background-color: #fff;\n  border-radius: 2px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);\n  transition: all .3s ease;\n  font-family: Helvetica, Arial, sans-serif;\n}\n.modal-header h3 {\n  margin-top: 0;\n  color: #42b983;\n}\n.modal-body {\n  margin: 20px 0;\n}\n.modal-default-button {\n  float: right;\n}\n\n/*\n * The following styles are auto-applied to elements with\n * transition=\"modal\" when their visibility is toggled\n * by Vue.js.\n *\n * You can easily play with the modal transition by editing\n * these styles.\n */\n.modal-enter {\n  opacity: 0;\n}\n.modal-leave-active {\n  opacity: 0;\n}\n.modal-enter .modal-container,\n.modal-leave-active .modal-container {\n  transform: scale(1.1);\n}\n  ", ""]);
 
 // exports
 
@@ -53075,6 +53059,36 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Pacientes.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -57445,43 +57459,27 @@ var render = function() {
     _c("div", { staticClass: "modal-mask" }, [
       _c("div", { staticClass: "modal-wrapper" }, [
         _c("div", { staticClass: "modal-container" }, [
-          _c(
-            "div",
-            { staticClass: "modal-header" },
-            [
-              _vm._t("header", [
-                _vm._v("\n            default header\n          ")
-              ])
-            ],
-            2
-          ),
+          _c("div", { staticClass: "modal-header" }, [_vm._t("header")], 2),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "modal-body" },
-            [
-              _vm._t("body", [_vm._v("\n            default body\n          ")])
-            ],
-            2
-          ),
+          _c("div", { staticClass: "modal-body" }, [_vm._t("body")], 2),
           _vm._v(" "),
           _c(
             "div",
             { staticClass: "modal-footer" },
             [
               _vm._t("footer", [
-                _vm._v("\n            default footer\n            "),
                 _c(
                   "button",
                   {
-                    staticClass: "modal-default-button",
+                    staticClass:
+                      "btn btn-sm btn-primary modal-default-button align-right",
                     on: {
                       click: function($event) {
                         return _vm.$emit("close")
                       }
                     }
                   },
-                  [_vm._v("\n              OK\n            ")]
+                  [_vm._v("\n              CERRAR\n            ")]
                 )
               ])
             ],
@@ -57546,7 +57544,7 @@ var render = function() {
                 attrs: { type: "button" },
                 on: {
                   click: function($event) {
-                    _vm.showModal = true
+                    _vm.menu = 3
                   }
                 }
               },
@@ -57556,25 +57554,8 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm.showModal
-              ? _c(
-                  "modal",
-                  {
-                    on: {
-                      close: function($event) {
-                        _vm.showModal = false
-                      }
-                    }
-                  },
-                  [
-                    _c("h3", { attrs: { slot: "header" }, slot: "header" }, [
-                      _vm._v("custom header")
-                    ])
-                  ]
-                )
-              : _vm._e()
-          ],
-          1
+            _vm.showModal ? _c("div") : _vm._e()
+          ]
         )
       ]),
       _vm._v(" "),
@@ -57603,6 +57584,8 @@ var render = function() {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
+                    _vm._m(1, true),
+                    _vm._v(" "),
                     _c("td", {
                       domProps: { textContent: _vm._s(paciente.nombre) }
                     }),
@@ -57618,96 +57601,6 @@ var render = function() {
                     _c("td", {
                       domProps: { textContent: _vm._s(paciente.hospital) }
                     }),
-                    _vm._v(" "),
-                    _c("td", {
-                      domProps: { textContent: _vm._s(paciente.piso_hospital) }
-                    }),
-                    _vm._v(" "),
-                    _c("td", {
-                      domProps: { textContent: _vm._s(paciente.habitacion) }
-                    }),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("div", { staticClass: "dropdown" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary dropdown-toggle",
-                            attrs: { type: "button", "data-toggle": "dropdown" }
-                          },
-                          [
-                            _vm._v(
-                              "\n\t\t\t\t\t\t\t    OPCIONES\n\t\t\t\t\t\t\t  "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "dropdown-menu" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "dropdown-item",
-                              attrs: { href: "#" }
-                            },
-                            [_vm._v("VER")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "dropdown-item",
-                              attrs: { href: "#" }
-                            },
-                            [_vm._v("EDITAR")]
-                          ),
-                          _vm._v(" "),
-                          paciente.estado_paciente == "EN ATENCIÓN" ||
-                          paciente.estado_paciente == "SALIDA"
-                            ? _c("div", [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "dropdown-item",
-                                    attrs: { href: "#" }
-                                  },
-                                  [_vm._v("FINALIZAR")]
-                                )
-                              ])
-                            : _c("div", [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "dropdown-item",
-                                    attrs: { href: "#" }
-                                  },
-                                  [_vm._v("EN ATENCIÓN")]
-                                )
-                              ]),
-                          _vm._v(" "),
-                          paciente.estado == "ACTIVO"
-                            ? _c("div", [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "dropdown-item",
-                                    attrs: { href: "#" }
-                                  },
-                                  [_vm._v("DESACTIVAR")]
-                                )
-                              ])
-                            : _c("div", [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "dropdown-item",
-                                    attrs: { href: "#" }
-                                  },
-                                  [_vm._v("ACTIVAR")]
-                                )
-                              ])
-                        ])
-                      ])
-                    ]),
                     _vm._v(" "),
                     _c("td", {
                       domProps: {
@@ -57736,6 +57629,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
+        _c("th", [_vm._v("Acciones")]),
+        _vm._v(" "),
         _c("th", [_vm._v("Nombre")]),
         _vm._v(" "),
         _c("th", [_vm._v("Identificación")]),
@@ -57744,15 +57639,35 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Hospital")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Piso hospital")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Habitacion")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Acciones")]),
-        _vm._v(" "),
         _c("th", [_vm._v("Estado Paciente")]),
         _vm._v(" "),
         _c("th", [_vm._v("Estado")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-sm btn-success", attrs: { type: "button" } },
+          [
+            _c("i", { staticClass: "fas fa-search" }),
+            _vm._v(" Ver\n\t\t\t\t\t\t  \t")
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn btn-sm btn-warning", attrs: { type: "button" } },
+          [
+            _c("i", { staticClass: "fas fa-user-edit" }),
+            _vm._v(" Editar\n\t\t\t\t\t\t\t")
+          ]
+        )
       ])
     ])
   }
@@ -70129,7 +70044,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pacientes_vue_vue_type_template_id_04d7a447___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pacientes.vue?vue&type=template&id=04d7a447& */ "./resources/js/components/Pacientes.vue?vue&type=template&id=04d7a447&");
 /* harmony import */ var _Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pacientes.vue?vue&type=script&lang=js& */ "./resources/js/components/Pacientes.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _Pacientes_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Pacientes.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -70137,7 +70054,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Pacientes_vue_vue_type_template_id_04d7a447___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Pacientes_vue_vue_type_template_id_04d7a447___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -70166,6 +70083,22 @@ component.options.__file = "resources/js/components/Pacientes.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Pacientes.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Pacientes.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Pacientes.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Pacientes.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

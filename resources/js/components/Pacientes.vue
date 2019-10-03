@@ -11,15 +11,10 @@
             <div class="card-header pt-3">
             	<div class="d-sm-flex align-items-center justify-content-between mb-2">
               <h6 class="m-0 font-weight-bold text-primary d-inline">Registro de Pacientes</h6>
-           	    	<button type="button" @click="showModal = true" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-user-injured"></i> NUEVO</button>
+           	    	<button type="button" @click="menu=3" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-user-injured"></i> NUEVO</button>
 					  <!-- use the modal component, pass in the prop -->
-					  <modal v-if="showModal" @close="showModal = false">
-					    <!--
-					      you can use custom content here to overwrite
-					      default content
-					    -->
-					    <h3 slot="header">custom header</h3>
-					  </modal>
+					  <div v-if="showModal">
+					  </div>
             	</div>
             </div>
             <div class="card-body">
@@ -27,13 +22,11 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
+                      <th>Acciones</th>
                       <th>Nombre</th>
                       <th>Identificación</th>
                       <th>Médico</th>
                       <th>Hospital</th>
-                      <th>Piso hospital</th>
-                      <th>Habitacion</th>
-                      <th>Acciones</th>
                       <th>Estado Paciente</th>
                       <th>Estado</th>
 
@@ -44,35 +37,21 @@
                     	<div v-if="paciente.poliza_tres ==''" class="d-none">
                     		{{paciente.poliza_tres = 'DESCONOCIDA'}}
                     	</div>
+                     <td>
+                      	<div class="btn-group" role="group">
+						  	<button type="button" class="btn btn-sm btn-success">
+						    	<i class="fas fa-search"></i> Ver
+						  	</button>
+
+						  	<button type="button" class="btn btn-sm btn-warning">
+								<i class="fas fa-user-edit"></i> Editar
+							</button>
+						</div>
+					  </td>
                       <td v-text="paciente.nombre"></td>
                       <td v-text="paciente.identidad"></td>
                       <td v-text="paciente.medico"></td>
                       <td v-text="paciente.hospital"></td>
-                      <td v-text="paciente.piso_hospital"></td>
-                      <td v-text="paciente.habitacion"></td>
-                      <td><div class="dropdown">
-							  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-							    OPCIONES
-							  </button>
-							  <div class="dropdown-menu">
-							    <a class="dropdown-item" href="#">VER</a>
-							    <a class="dropdown-item" href="#">EDITAR</a>
-							    <div v-if="paciente.estado_paciente=='EN ATENCIÓN' || paciente.estado_paciente=='SALIDA' ">
-							    	<a class="dropdown-item" href="#">FINALIZAR</a>
-							    </div>
-							    <div v-else>
-							    	<a class="dropdown-item" href="#">EN ATENCIÓN</a>
-							    </div>
-							    <div v-if="paciente.estado=='ACTIVO'">
-							    	<a class="dropdown-item" href="#">DESACTIVAR</a>
-							    </div>
-							    <div v-else>
-							    	<a class="dropdown-item" href="#">ACTIVAR</a>
-							    </div>
-
-							  </div>
-							</div>
-					   </td>
                       <td v-text="paciente.estado_paciente"></td>
                       <td v-text="paciente.estado"></td>
                     </tr>
@@ -87,7 +66,7 @@
 </template>
 <script>
 import datatables from 'datatables'
-import {EagleModal} from 'vue-eagle-modal'
+import {eModal} from 'vue-eagle-modal'
 export default{
 	data(){
 		return {
@@ -178,25 +157,77 @@ export default{
 	mounted(){
 		console.log('Componente montado Paciente.');
 		this.listarPacientes();
-		this.$modals.open({
-	      title: 'Custom theme',
-	      text: "your alert Text",
-	      items:[
-	          {
-	              label: 'Username',
-	              name: 'username',
-	              type: 'text',
-	              value: 'Daniel',
-	          },
-	          {
-	              label: 'Bio',
-	              name: 'bio',
-	              type: 'textarea',
-	              value: 'web developer',
-	          }
-	      ]
-	    }).open();
+		alert(menu)
 	}
-}
+};
 
 </script>
+
+  <style type="text/css">
+    .modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  min-width:200px;
+  overflow-y: auto;
+  overflow-x: none;
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+  </style>
