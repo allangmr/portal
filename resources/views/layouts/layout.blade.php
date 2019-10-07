@@ -26,6 +26,7 @@
 
   <!-- Custom styles for this page -->
   <link href="css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/buttons/1.6.0/css/buttons.dataTables.min.css" rel="stylesheet">
 
 </head>
 
