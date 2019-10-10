@@ -1,7 +1,8 @@
 <template >
   <!-- Begin Page Content -->
   <div v-if="show=='pacientes'">
-    <div class="container-fluid">
+  	<spinner v-if="loading"></spinner>
+    <div v-else class="container-fluid">
       <!-- Page Heading -->
       <h1 class="h3 mb-2 text-gray-800">Consulta de Pacientes</h1>
       <p class="mb-4">Información detallada de los pacientes.</p>
@@ -43,7 +44,7 @@
                   >{{paciente.poliza_tres = 'DESCONOCIDA'}}</div>
                   <td>
                     <div class="btn-group" role="group">
-                      <button type="button" @click="show='ver'" class="btn btn-sm btn-success">
+                      <button type="button" @click="show='ver';verPaciente(paciente.id)" class="btn btn-sm btn-success">
                         <i class="fas fa-search"></i> Ver
                       </button>
 
@@ -67,7 +68,8 @@
     </div>
   </div>
   <div v-else-if="show=='ver'">
-    <div class="container-fluid">
+  	<spinner v-if="loading"></spinner>
+    <div v-else class="container-fluid">
       <!-- Page Heading -->
       <h1 class="h3 mb-2 text-gray-800">Información del Paciente</h1>
       <p class="mb-4">Información detallada del paciente.</p>
@@ -99,14 +101,42 @@
             <div class="form-group">
               <label for="firstname">Nombre Completo</label>
               <div>
-                <input type="text" class="form-control" readonly />
+                <input type="text" class="form-control" v-bind:value="PacienteSolo.nombre" readonly/>
               </div>
             </div>
 
             <div class="form-group">
               <label for="lastname">Identidad</label>
               <div>
-                <input type="text" class="form-control" id="pac_id" name="pac_id" readonly />
+                <input type="text" class="form-control" v-bind:value="PacienteSolo.identidad" name="pac_id" readonly />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="firstname">Hospital</label>
+              <div>
+                <input type="text" class="form-control" v-bind:value="PacienteSolo.hospital" readonly/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="firstname">Habitación</label>
+              <div>
+                <input type="text" class="form-control" v-bind:value="PacienteSolo.habitacion" readonly/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Piso Hospital</label>
+              <div>
+                <input type="text" class="form-control" v-bind:value="PacienteSolo.piso_hospital" name="pac_id" readonly />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Observación del Paciente</label>
+              <div>
+                <textarea class="form-control" v-bind:value="PacienteSolo.observación"></textarea>
               </div>
             </div>
 
@@ -116,8 +146,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="tx_fec_entrada"
-                  name="username"
+                  v-bind:value="format_date(PacienteSolo.fec_entrada)"
                   readonly
                 />
               </div>
@@ -129,8 +158,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="tx_fec_salida"
-                  name="tx_fec_salida"
+                  v-bind:value="format_date(PacienteSolo.fec_salida)"
                   readonly
                 />
               </div>
@@ -138,7 +166,7 @@
 
             <div class="form-group">
               <label for="password">Doctores</label>
-              <input type="text" class="form-control" id="tx_doctor" name="tx_doctor" readonly />
+              <input type="text" class="form-control" v-bind:value="PacienteSolo.medico" readonly />
             </div>
 
             <div class="form-group">
@@ -147,8 +175,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="tx_aseguradoras"
-                  name="tx_aseguradoras"
+					v-bind:value="aseguradoras(PacienteSolo.aseguradora_uno, PacienteSolo.aseguradora_dos, PacienteSolo.aseguradora_tres)"
                   readonly
                 />
               </div>
@@ -156,22 +183,37 @@
 
             <div class="form-group">
               <label for="password">Polizas</label>
-              <input type="text" class="form-control" id="tx_doctor" name="tx_doctor" readonly />
+              <input type="text" class="form-control" v-bind:value="aseguradoras(PacienteSolo.poliza_uno, PacienteSolo.poliza_dos, PacienteSolo.poliza_tres)" readonly />
             </div>
 
             <div class="form-group">
-              <label for="password">Numero de Atencion</label>
-              <input type="text" class="form-control" id="tx_doctor" name="tx_doctor" readonly />
+              <label for="password">Numero de Formulario (Atención)</label>
+              <input type="text" class="form-control" v-bind:value="PacienteSolo.num_formulario" readonly />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Monto Pasado</label>
+              <input type="text" class="form-control" v-bind:value="PacienteSolo.monto_pasado" readonly />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Monto Recibido</label>
+              <input type="text" class="form-control" v-bind:value="PacienteSolo.monto_recibido" readonly />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Detalle de Pago</label>
+                <textarea class="form-control" v-bind:value="PacienteSolo.detalle_pago"></textarea>
             </div>
 
             <div class="form-group">
               <label for="password">Estado de Atencion</label>
-              <input type="text" class="form-control" id="tx_doctor" name="tx_doctor" readonly />
+              <input type="text" class="form-control" v-bind:value="PacienteSolo.estado_paciente" readonly />
             </div>
 
             <div class="form-group">
               <label for="password">Estado de Paciente</label>
-              <input type="text" class="form-control" id="tx_doctor" name="tx_doctor" readonly />
+              <input type="text" class="form-control" v-bind:value="PacienteSolo.estado" readonly />
             </div>
 
             <div class="form-group">
@@ -216,6 +258,7 @@ export default {
   data() {
     return {
       showModal: false,
+      loading:true,
       show: "pacientes",
       id: "",
       nombre: "",
@@ -244,6 +287,7 @@ export default {
       created_at: "",
       updated_at: "",
       arrayPacientes: [],
+      PacienteSolo: [],
       dataTable: null
     };
   },
@@ -256,15 +300,56 @@ export default {
           // handle success
           me.arrayPacientes = response.data;
           me.mytable();
+          me.loading = false;
         })
         .catch(function(error) {
           // handle error
           console.log(error);
         });
     },
-    hola() {
-      alert("hola");
+    verPaciente(id) {
+      this.PacienteSolo = [];
+      let param = id;
+      let me = this;
+      axios
+        .get("/pacientes/"+param)
+        .then(function(response) {
+          // handle success
+          console.log(response.data)
+          me.PacienteSolo = response.data;
+          me.loading = false;
+        })
+        .catch(function(error) {
+          // handle error
+          console.log(error);
+        });
     },
+    aseguradoras(val1, val2, val3) {
+  		let aseguradora_1 = val1;
+  		let aseguradora_2 = val2;
+  		let aseguradora_3 = val3;
+  		let contador_aseguradora = '';
+  		if(aseguradora_1)
+  		{
+  			contador_aseguradora += aseguradora_1;
+  		}
+  		if(aseguradora_2)
+  		{
+  			contador_aseguradora += ", "+ aseguradora_2;
+  		}
+  		if(aseguradora_3)
+  		{
+  			contador_aseguradora += ", "+ aseguradora_3;
+  		}
+  		return contador_aseguradora;
+    },
+    format_date(inputDate) {
+	    var date = new Date(inputDate);
+	    if (!isNaN(date.getTime())) {
+	        // Months use 0 index.
+	        return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+	    }
+	},
     mytable() {
       $(function() {
         $("#dataTable").DataTable({
