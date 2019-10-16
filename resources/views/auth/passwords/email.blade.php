@@ -1,4 +1,4 @@
-@extends('.\layouts\layoutsec')
+@extends('layouts.layoutsec')
 
 @section('contenido')
   <div class="container">
