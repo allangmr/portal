@@ -1,4 +1,4 @@
-@extends('.\layouts\layouterror')
+@extends('layouts.layouterror')
 
 
 @section("contenido")
