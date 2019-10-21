@@ -55113,7 +55113,7 @@ var render = function() {
                                           on: {
                                             click: function($event) {
                                               _vm.show = "editar"
-                                              _vm.editarPaciente(paciente.id)
+                                              _vm.verPaciente(paciente.id)
                                             }
                                           }
                                         },
@@ -55531,8 +55531,9 @@ var render = function() {
                                     attrs: { type: "button" },
                                     on: {
                                       click: function($event) {
+                                        $event.preventDefault()
                                         _vm.show = "editar"
-                                        _vm.verPaciente(_vm.PacienteSolo.id)
+                                        _vm.editarPaciente(_vm.PacienteSolo.id)
                                       }
                                     }
                                   },
@@ -56046,7 +56047,7 @@ var render = function() {
                                 _c(
                                   "button",
                                   {
-                                    staticClass: "btn btn-warning",
+                                    staticClass: "btn btn-primary",
                                     attrs: { type: "submit" },
                                     on: {
                                       click: function($event) {
@@ -56055,10 +56056,8 @@ var render = function() {
                                     }
                                   },
                                   [
-                                    _c("i", {
-                                      staticClass: "fas fa-user-edit"
-                                    }),
-                                    _vm._v(" Editar Paciente\n              ")
+                                    _c("i", { staticClass: "fas fa-save" }),
+                                    _vm._v(" Actualizar\n              ")
                                   ]
                                 )
                               ])

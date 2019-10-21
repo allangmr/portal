@@ -54,7 +54,7 @@
 
                       <button
                         type="button"
-                        @click="show='editar';editarPaciente(paciente.id)"
+                        @click="show='editar';verPaciente(paciente.id)"
                         class="btn btn-sm btn-warning"
                       >
                         <i class="fas fa-user-edit"></i> Editar
@@ -281,7 +281,7 @@
                 <button
                   type="button"
                   class="btn btn-warning"
-                  @click="show='editar';verPaciente(PacienteSolo.id)"
+                  @click.prevent="show='editar';editarPaciente(PacienteSolo.id)"
                 >
                   <i class="fas fa-user-edit"></i> Editar Paciente
                 </button>
@@ -482,8 +482,8 @@
               </div>
 
               <div class="form-group">
-                <button type="submit" class="btn btn-warning" @click="1==1">
-                  <i class="fas fa-user-edit"></i> Editar Paciente
+                <button type="submit" class="btn btn-primary" @click="1==1">
+                  <i class="fas fa-save"></i> Actualizar
                 </button>
               </div>
             </form>
