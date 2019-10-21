@@ -2789,7 +2789,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -55348,6 +55347,7 @@ var render = function() {
                                 _c("div", [
                                   _c("textarea", {
                                     staticClass: "form-control",
+                                    attrs: { readonly: "" },
                                     domProps: {
                                       value: _vm.PacienteSolo.observación
                                     }
@@ -55490,6 +55490,7 @@ var render = function() {
                                 _vm._v(" "),
                                 _c("textarea", {
                                   staticClass: "form-control",
+                                  attrs: { readonly: "" },
                                   domProps: {
                                     value: _vm.PacienteSolo.detalle_pago
                                   }
@@ -55523,6 +55524,26 @@ var render = function() {
                               ]),
                               _vm._v(" "),
                               _c("div", { staticClass: "form-group" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-warning",
+                                    attrs: { type: "button" },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.show = "editar"
+                                        _vm.verPaciente(_vm.PacienteSolo.id)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "fas fa-user-edit"
+                                    }),
+                                    _vm._v(" Editar Paciente\n              ")
+                                  ]
+                                ),
+                                _vm._v(" "),
                                 _c(
                                   "button",
                                   {
@@ -55864,18 +55885,6 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", [
-                                  _c("input", {
-                                    staticClass: "form-control",
-                                    attrs: { type: "text" },
-                                    domProps: {
-                                      value: _vm.aseguradoras(
-                                        _vm.PacienteSolo.aseguradora_uno,
-                                        _vm.PacienteSolo.aseguradora_dos,
-                                        _vm.PacienteSolo.aseguradora_tres
-                                      )
-                                    }
-                                  }),
-                                  _vm._v(" "),
                                   _c(
                                     "select",
                                     { staticClass: "form-control" },
@@ -56037,7 +56046,7 @@ var render = function() {
                                 _c(
                                   "button",
                                   {
-                                    staticClass: "btn btn-primary",
+                                    staticClass: "btn btn-warning",
                                     attrs: { type: "submit" },
                                     on: {
                                       click: function($event) {
@@ -56046,24 +56055,10 @@ var render = function() {
                                     }
                                   },
                                   [
-                                    _c("i", { staticClass: "fas fa-search" }),
+                                    _c("i", {
+                                      staticClass: "fas fa-user-edit"
+                                    }),
                                     _vm._v(" Editar Paciente\n              ")
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass: "btn btn-primary",
-                                    attrs: {
-                                      type: "submit",
-                                      name: "signup",
-                                      value: "Sign up"
-                                    }
-                                  },
-                                  [
-                                    _c("i", { staticClass: "fas fa-search" }),
-                                    _vm._v(" Ver Atenciones\n              ")
                                   ]
                                 )
                               ])

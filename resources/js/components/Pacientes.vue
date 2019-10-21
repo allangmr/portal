@@ -172,7 +172,7 @@
               <div class="form-group">
                 <label for="lastname">Observación del Paciente</label>
                 <div>
-                  <textarea class="form-control" v-bind:value="PacienteSolo.observación"></textarea>
+                  <textarea class="form-control" v-bind:value="PacienteSolo.observación" readonly></textarea>
                 </div>
               </div>
 
@@ -259,7 +259,7 @@
 
               <div class="form-group">
                 <label for="password">Detalle de Pago</label>
-                <textarea class="form-control" v-bind:value="PacienteSolo.detalle_pago"></textarea>
+                <textarea class="form-control" v-bind:value="PacienteSolo.detalle_pago" readonly></textarea>
               </div>
 
               <div class="form-group">
@@ -278,6 +278,13 @@
               </div>
 
               <div class="form-group">
+                <button
+                  type="button"
+                  class="btn btn-warning"
+                  @click="show='editar';verPaciente(PacienteSolo.id)"
+                >
+                  <i class="fas fa-user-edit"></i> Editar Paciente
+                </button>
                 <button type="submit" class="btn btn-primary" name="signup" value="Sign up">
                   <i class="fas fa-search"></i> Ver Atenciones
                 </button>
@@ -422,11 +429,6 @@
               <div class="form-group">
                 <label for="email">Aseguradoras</label>
                 <div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    v-bind:value="aseguradoras(PacienteSolo.aseguradora_uno, PacienteSolo.aseguradora_dos, PacienteSolo.aseguradora_tres)"
-                  />
                   <select class="form-control">
                     <option
                       v-bind:value="aseguradoras(PacienteSolo.aseguradora_uno, PacienteSolo.aseguradora_dos, PacienteSolo.aseguradora_tres)"
@@ -480,11 +482,8 @@
               </div>
 
               <div class="form-group">
-                <button type="submit" class="btn btn-primary" @click="1==1">
-                  <i class="fas fa-search"></i> Editar Paciente
-                </button>
-                <button type="submit" class="btn btn-primary" name="signup" value="Sign up">
-                  <i class="fas fa-search"></i> Ver Atenciones
+                <button type="submit" class="btn btn-warning" @click="1==1">
+                  <i class="fas fa-user-edit"></i> Editar Paciente
                 </button>
               </div>
             </form>
