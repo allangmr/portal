@@ -1,6 +1,6 @@
 <template >
   <!-- Begin Page Content -->
-  <div v-if="show=='pacientes'">
+  <div v-show="show=='pacientes'">
     <spinner v-if="loading"></spinner>
     <div v-else class="container-fluid">
       <!-- Page Heading -->
@@ -75,7 +75,7 @@
       </div>
     </div>
   </div>
-  <div v-else-if="show=='ver'">
+  <div v-show="show=='ver'">
     <div v-if="cargado">
       <spinner v-if="loadings"></spinner>
       <div v-else class="container-fluid">
@@ -295,7 +295,7 @@
       </div>
     </div>
   </div>
-  <div v-else-if="show=='editar'">
+  <div v-show="show=='editar'">
     <div v-if="cargado">
       <spinner v-if="loadings"></spinner>
       <div v-else class="container-fluid">
